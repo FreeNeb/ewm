@@ -79,7 +79,7 @@ QRCode.prototype = {
   },
   
   getMyQRCount: function() {
-    from = Blockchain.transaction.from;
+    var from = Blockchain.transaction.from;
     var qrs = this.qrMap.get(from);
     if (!qrs) {
       return 0;

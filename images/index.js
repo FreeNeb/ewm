@@ -317,10 +317,11 @@ function onload(){
                 var fgcolor=fg.replace('#','');
                 
                 var colorParam=(bgcolor.length==6 && fgcolor.length==6) ? '&bg='+bgcolor+'&fg='+fgcolor : '';
-                var uri="http://qr.liantu.com/api.php?text=" + encodeURIComponent(object.getString())+colorParam;
+                uri="http://qr.liantu.com/api.php?text=" + encodeURIComponent(object.getString())+colorParam;
                 
-                alert(uri)
+                // alert(uri)
                 console.log(uri)
+                createQRInfo(encodeURIComponent(object.getString()), bgcolor, fgcolor);
                 // $('bigcode').innerHTML='<a href="'+uri+'" target="_blank"><img src="'+uri+'" id="qrcodeimg"/></a>'
             }else{
                 $('bigcode').innerHTML='<div class="fail">ʧ</div>';
